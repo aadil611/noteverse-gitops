@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: noteverse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "noteverse"
+  template:
+    metadata:
+      labels:
+        app: "noteverse"
+    spec:
+      containers:
+        - name: noteverse
+          image: aadil611/demo_app
+          ports:
+            - containerPort: 80
+              name: http
+              protocol: TCP
