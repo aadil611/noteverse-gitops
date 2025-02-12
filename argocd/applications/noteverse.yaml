@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: "https://github.com/aadil611/noteverse-gitops"
+    repoURL: "https://github.com/aadil611/noteverse-gitops.git"
     targetRevision: main
-    path: overlays/dev 
+    path: overlays/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
