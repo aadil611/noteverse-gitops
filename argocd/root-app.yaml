@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: "https://github.com/aadil611/noteverse-gitops.git"
-    path: argocd/applications
+    path: applications
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
