@@ -15,3 +15,15 @@ patches:
     - op: replace
       path: /spec/template/spec/containers/0/image
       value: aadil611/demo_app
+
+- target:
+    kind: Deployment
+    name: my-app
+  patch: |+
+    - op: replace
+      path: /spec/template/spec/containers/0/image
+      value: aadil611/demo_app
+    - op: replace 
+      path: /metadata/name
+      value: my-app-test
+      
