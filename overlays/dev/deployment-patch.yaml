@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-demo-app
+  name: my-app
 spec:
   replicas: 1
   template:
     spec:
       containers:
-        - name: my-demo-app-ctnr
-          image: aadil611/demo_app
+      - name: my-demo-app-ctnr
+        image: aadil611/demo_app
