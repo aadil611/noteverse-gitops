@@ -1,0 +1,17 @@
+resources:
+- ../../base
+
+namePrefix: prod-
+labels:
+- pairs:
+    env: prod
+  includeSelectors: true
+
+patches:
+- target:
+    kind: Deployment
+    name: my-app
+  patch: |
+    - op: replace
+      path: /spec/template/spec/containers/0/image
+      value: aadil611/demo_app
